@@ -1,0 +1,9 @@
+export default function Lost() {
+    return (
+        <div className="flexItem">
+            <h1>error 404</h1>
+            <h3>Something went wrong</h3>
+            <h2>Page not found</h2>
+        </div>
+    )
+}

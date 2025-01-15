@@ -1,0 +1,52 @@
+.card {
+    border: 1px white solid;
+    padding: 3rem;
+    aspect-ratio: 1/1;
+    height: 600px;
+    width: 380px;
+    position: relative;
+}
+
+.card:hover {
+    transform: scale(0.99);
+    background-color: #292828;
+}
+
+.cardTitle {
+    font-size: 2rem;
+    padding: .5rem 0;
+    color: #29a7ce;
+}
+
+.cardBody {
+    padding: .5rem;
+}
+
+.cardContent {
+    font-size: 1.2rem;
+    padding: 2rem 0;
+    height: 200px;
+}
+
+span {
+    font-size: 1.5rem;
+}
+
+.styleBtnRead {
+    position: absolute;
+    bottom: 1rem;
+    left: 25%
+}
+
+.linkBtn {
+    font-size: 1.2rem;
+}
+
+img,
+.card {
+    border-radius: 5px;
+}
+
+.image {
+    aspect-ratio: 2/1;
+}

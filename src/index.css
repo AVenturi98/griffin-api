@@ -1,0 +1,152 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.cardBody>figure {
+  width: 200px;
+
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+  color: white;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+a.active {
+  color: goldenrod;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+li {
+  padding: .6rem
+}
+
+#name_quote {
+  list-style: circle;
+}
+
+.quote {
+  color: goldenrod;
+  margin-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+#listNav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  position: fixed;
+  color: dodgerblue;
+  margin-top: 4rem;
+}
+
+.titleHome {
+  margin-bottom: 5rem;
+  color: goldenrod;
+  text-shadow: 5px 5px 5px rgba(30, 144, 255, 0.7);
+}
+
+.imgHome {
+  box-shadow: 0 10px 10px #000;
+  border-radius: 10%;
+}
+
+.header {
+  background-color: rgb(150, 143, 127);
+  padding: 2rem;
+}
+
+.header>ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.header>ul>li {
+  background-color: #535353;
+  border: 1px solid rgba(70, 69, 69, 0.61);
+  border-radius: 10px;
+}
+
+.header>ul>li:hover {
+  background-color: rgb(140, 195, 250);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+  margin-top: 5rem;
+}
+
+.col-100 {
+  width: 100%;
+}
+
+
+.col-6 {
+  width: calc(3 * 100% / 12);
+}
+
+.flexListCharacter,
+.flexListName {
+  padding: 2rem
+}
+
+.titleName {
+  margin: 5rem 0;
+}
+
+#name_list {
+  list-style: decimal;
+}
