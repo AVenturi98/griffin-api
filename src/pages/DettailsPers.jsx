@@ -2,13 +2,12 @@ import { useParams } from "react-router-dom"
 import { useContext, useEffect, useState } from "react"
 import { persons } from "../persons"
 import GlobalContext from "../context/GlobalContext"
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faHandPointUp } from "@fortawesome/free-solid-svg-icons";
 
 export default function DettailsPers() {
 
-    const [post, setPost] = useState('')
-
-    const { changeLang } = useContext(GlobalContext)
+    const { post, setPost, changeLang } = useContext(GlobalContext)
 
     const { id } = useParams()
 
@@ -49,7 +48,12 @@ export default function DettailsPers() {
                                             <source src={post.videoEng} type="video/mp4" />
                                             Il tuo browser non supporta il tag video.
                                         </video> :
-                                        'Try to change language for view clip'}
+                                        <>
+                                            <div id="iconHand">
+                                                <FontAwesomeIcon icon={faHandPointUp} className={post.video && !post.videoEng ? "iconHandUp" : 'd-none'} />
+                                            </div>
+                                            'Try to change language for view clip'
+                                        </>}
                                 </div>}
                             {!changeLang &&
                                 <div className={changeLang ? 'd-none' : 'd-block'} >
@@ -58,7 +62,12 @@ export default function DettailsPers() {
                                             <source src={post.video} type="video/mp4" />
                                             Il tuo browser non supporta il tag video.
                                         </video> :
-                                        'Try to change language for view clip'}
+                                        <>
+                                            <div id="iconHand">
+                                                <FontAwesomeIcon icon={faHandPointUp} className={!post.video && post.videoEng ? "iconHandUp" : 'd-none'} />
+                                            </div>
+                                            'Prova a cambiare lingua per vedere la clip'
+                                        </>}
                                 </div>
                             }
                         </div>}

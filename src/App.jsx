@@ -13,6 +13,8 @@ import DettailsPers from './pages/DettailsPers'
 
 function App() {
 
+  const [post, setPost] = useState('')
+
   const [changeLang, setChangeLang] = useState(true)
 
   function setLangITA() {
@@ -25,7 +27,7 @@ function App() {
 
   return (
     <>
-      <GlobalContext.Provider value={{ changeLang, setLangITA, setLangEGN }}>
+      <GlobalContext.Provider value={{ changeLang, setLangITA, setLangEGN, post, setPost }}>
         <BrowserRouter>
           <Routes>
             <Route element={<DefaultLayout />}>

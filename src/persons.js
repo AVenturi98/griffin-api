@@ -80,7 +80,8 @@ export const persons = [
         person: 'Brian Griffin',
         image: brainGriffin,
         quote: '“Hey, how about a little less questions and a little more shut the hell up?”',
-        video: videoBrain
+        video: videoBrain,
+        videoEng: undefined
     },
     {
         id: 7,

@@ -73,8 +73,18 @@ button:hover {
   color: goldenrod
 }
 
+.header {
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(150, 143, 127);
+  position: relative;
+}
+
 #btn_lang {
   padding: 5px 7px;
+  position: absolute;
+  right: -25px;
+  bottom: 40px;
 }
 
 #name_quote {
@@ -92,6 +102,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 
 .flexItem {
@@ -114,13 +125,6 @@ button:hover {
 .imgHome {
   box-shadow: 0 10px 10px #000;
   border-radius: 10%;
-}
-
-.header {
-  justify-content: space-around;
-  align-items: center;
-  background-color: rgb(150, 143, 127);
-  padding: 2rem;
 }
 
 .header,
@@ -213,4 +217,36 @@ button:not(#btn_lang) {
 
 .d-block {
   display: block
+}
+
+#iconHand {
+  padding: 5px 7px;
+  position: absolute;
+  right: 50px;
+  top: 80px;
+  font-size: 50px;
+  transform: rotate(45deg);
+}
+
+.iconHandUp {
+  animation-name: pointBtnLang;
+  animation-duration: 500ms;
+  animation-iteration-count: 4;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-delay: 1.2s;
+  color: rgba(0, 0, 0, 0);
+}
+
+@keyframes pointBtnLang {
+  from {
+    transform: scale(0.5);
+    color: rgba(70, 69, 69, 0);
+  }
+
+  to {
+    transform: scale(1.2);
+    color: rgba(70, 69, 69, 1);
+    transition: 100ms;
+  }
 }
