@@ -19,42 +19,51 @@ export default function DettailsPers() {
     }, [id])
 
     return (
-        <>
-            {post &&
-                <div className="dettailsCard">
-                    <img src={post.image} />
-                    <div className="info">
-                        <h1>{post.person}</h1>
-                        {changeLang ?
-                            <div>{post.quote}</div> :
-                            <div>{post.quoteITA}</div>
-                        }
-                    </div>
-                </div>
-            }
-
-            {post.video &&
-                <div className="containClip">
-                    <h2>{changeLang ? 'Enjoy this clip' : 'Goditi questa clip'}</h2>
-
-                    {changeLang &&
-                        <div className={changeLang ? 'd-block' : 'd-none'}>
-                            <video width="550px" controls>
-                                <source src={post.videoEng} type="video/mp4" />
-                                Il tuo browser non supporta il tag video.
-                            </video>
-                        </div>}
-                    {!changeLang &&
-                        <div className={changeLang ? 'd-none' : 'd-block'} >
-                            <video width="550px" controls>
-                                <source src={post.video} type="video/mp4" />
-                                Il tuo browser non supporta il tag video.
-                            </video>
+        <main>
+            <section>
+                {post &&
+                    <div className="dettailsCard">
+                        <img src={post.image} />
+                        <div className="info">
+                            <h1>{post.person}</h1>
+                            {changeLang ?
+                                <div>{post.quote}</div> :
+                                <div>{post.quoteITA}</div>
+                            }
                         </div>
-                    }
+                    </div>
+                }
+            </section>
 
-                </div>}
+            <section>
+                <div className="containClip">
+                    {!post.video && !post.videoEng ?
+                        '' :
+                        <div>
+                            <h2>{changeLang ? 'Enjoy this clip' : 'Goditi questa clip'}</h2>
 
-        </>
+                            {changeLang &&
+                                <div className={changeLang ? 'd-block' : 'd-none'}>
+                                    {post.videoEng ?
+                                        <video width="550px" controls>
+                                            <source src={post.videoEng} type="video/mp4" />
+                                            Il tuo browser non supporta il tag video.
+                                        </video> :
+                                        'Try to change language for view clip'}
+                                </div>}
+                            {!changeLang &&
+                                <div className={changeLang ? 'd-none' : 'd-block'} >
+                                    {post.video ?
+                                        <video width="550px" controls>
+                                            <source src={post.video} type="video/mp4" />
+                                            Il tuo browser non supporta il tag video.
+                                        </video> :
+                                        'Try to change language for view clip'}
+                                </div>
+                            }
+                        </div>}
+                </div>
+            </section>
+        </main>
     )
 }

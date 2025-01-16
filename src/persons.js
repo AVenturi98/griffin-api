@@ -42,7 +42,8 @@ export const persons = [
         person: 'Peter Griffin',
         image: peterGriffin,
         quote: '"Shut up Meg."',
-        video: videoPeter
+        video: videoPeter,
+        videoEng: undefined
     },
     {
         id: 2,
