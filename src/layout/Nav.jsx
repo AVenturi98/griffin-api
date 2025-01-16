@@ -1,11 +1,17 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import GlobalContext from "../context/GlobalContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 export default function Nav() {
+
+    const { changeLang, setLangITA, setLangEGN } = useContext(GlobalContext)
 
     return (
 
         <>
-            <div className="header">
+            <nav className="header">
                 <ul id="listNav">
                     <li>
                         <NavLink to='/'>Home</NavLink>
@@ -20,8 +26,14 @@ export default function Nav() {
                         <NavLink to='/person'>All persons</NavLink>
                     </li>
                 </ul>
+                <div>
+                    <button type="button">
+                        <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    </button>
+                    <button type="button" onClick={changeLang ? () => setLangITA() : () => setLangEGN()} id="btn_lang" >{changeLang ? 'ITA' : 'ENG'}</button>
+                </div>
 
-            </div>
+            </nav>
         </>
     )
 }

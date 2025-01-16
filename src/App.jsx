@@ -14,9 +14,17 @@ function App() {
 
   const [changeLang, setChangeLang] = useState(true)
 
+  function setLangITA() {
+    setChangeLang(false)
+  }
+
+  function setLangEGN() {
+    setChangeLang(true)
+  }
+
   return (
     <>
-      <GlobalContext.Provider value={{ changeLang, setChangeLang }}>
+      <GlobalContext.Provider value={{ changeLang, setLangITA, setLangEGN }}>
         <BrowserRouter>
           <Routes>
             <Route element={<DefaultLayout />}>

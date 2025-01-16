@@ -8,7 +8,7 @@ export default function DettailsPers() {
 
     const [post, setPost] = useState('')
 
-    const { changeLang, setChangeLang } = useContext(GlobalContext)
+    const { changeLang } = useContext(GlobalContext)
 
     const { id } = useParams()
 
@@ -17,14 +17,6 @@ export default function DettailsPers() {
         setPost(person)
 
     }, [id])
-
-    function setLangITA() {
-        setChangeLang(false)
-    }
-
-    function setLangEGN() {
-        setChangeLang(true)
-    }
 
     return (
         <>
@@ -37,7 +29,6 @@ export default function DettailsPers() {
                             <div>{post.quote}</div> :
                             <div>{post.quoteITA}</div>
                         }
-                        <button type="button" onClick={changeLang ? () => setLangITA() : () => setLangEGN()} >{changeLang ? 'ITA' : 'ENG'}</button>
                     </div>
                 </div>
             }
