@@ -14,6 +14,7 @@ import hartaman from "./assets/imgs/hartman.jpg"
 import mort from "./assets/imgs/mort.jpg"
 import tucker from "./assets/imgs/tucker.jpg"
 import west from "./assets/imgs/west.jpg"
+import chicken from "./assets/imgs/chicken.jpg"
 //videos
 import video from "./assets/videos/video.mp4"
 import videoPeter from "./assets/videos/videoPeter.mp4"
@@ -31,6 +32,7 @@ import videoMort from "./assets/videos/videoMort.mp4"
 import videoTucker from "./assets/videos/videoTucker.mp4"
 import videoWest from "./assets/videos/videoWest.mp4"
 import videoHartamn from "./assets/videos/videoHartman.mp4"
+import videoPolloG from "./assets/videos/videoPolloG.mp4"
 
 export const persons = [
     {
@@ -98,41 +100,48 @@ export const persons = [
     },
     {
         id: 10,
+        person: 'The Giant Chicken',
+        image: chicken,
+        quote: '',
+        video: videoPolloG
+    },
+    {
+        id: 12,
         person: "Herbert",
         image: herbert,
         quote: `"Ehi, ragazzino, che ne dici di un po' di caramelle...e magari anche un po' di compagnia?"`,
         video: videoHerbert
     },
     {
-        id: 11,
+        id: 13,
         person: "Carter Pewterschmidt",
         image: carter,
         quote: "I do it because I can!",
         video: videoCarter
     },
     {
-        id: 12,
+        id: 13,
         person: "Mort Goldman",
         image: mort,
         quote: "Oh no! I can't believe this is happening!",
         video: videoMort
     },
     {
-        id: 13,
+        id: 14,
         person: "Tom Tucker",
         image: tucker,
         quote: "I'm too young to be involved in this stuff!",
         video: videoTucker
     },
     {
-        id: 14,
+        id: 15,
         person: "West",
         image: west,
         quote: "I like it when things go according to my plans.",
         video: videoWest
     },
     {
-        id: 15,
+        id: 16,
         person: "Dr. Hartman",
         image: hartaman,
         quote: "Alright, Peter, it's nothing serious, but let's try to be careful.",

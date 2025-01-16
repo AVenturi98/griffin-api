@@ -21,7 +21,7 @@ export default function DettailsPers() {
                 <div className="dettailsCard">
                     <img src={post.image} />
                     <div className="info">
-                        <div>{post.person}</div>
+                        <h1>{post.person}</h1>
                         <div>{post.quote}</div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@ export default function DettailsPers() {
 
             {post.video &&
                 <div className="containClip">
-                    <h2>Goditi una clip</h2>
+                    <h2>Enjoy this clip</h2>
                     <video width="550px" controls>
                         <source src={post.video} type="video/mp4" />
                         Il tuo browser non supporta il tag video.
