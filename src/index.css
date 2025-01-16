@@ -182,3 +182,11 @@ li {
 .containClip>h2 {
   margin: 2rem auto;
 }
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block
+}

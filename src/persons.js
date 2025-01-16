@@ -10,12 +10,12 @@ import clevelandBrown from './assets/imgs/clevelandBrown.webp'
 import herbert from './assets/imgs/herbertH.jpg'
 import joe from './assets/imgs/joe.jpg'
 import carter from "./assets/imgs/carter.jpg"
-import hartaman from "./assets/imgs/hartman.jpg"
+import hartman from "./assets/imgs/hartman.jpg"
 import mort from "./assets/imgs/mort.jpg"
 import tucker from "./assets/imgs/tucker.jpg"
 import west from "./assets/imgs/west.jpg"
 import chicken from "./assets/imgs/chicken.jpg"
-//videos
+//videos-ita
 import video from "./assets/videos/video.mp4"
 import videoPeter from "./assets/videos/videoPeter.mp4"
 import videoStewie from "./assets/videos/videoStewie.mp4"
@@ -31,8 +31,10 @@ import videoCarter from "./assets/videos/videoCarter.mp4"
 import videoMort from "./assets/videos/videoMort.mp4"
 import videoTucker from "./assets/videos/videoTucker.mp4"
 import videoWest from "./assets/videos/videoWest.mp4"
-import videoHartamn from "./assets/videos/videoHartman.mp4"
+import videoHartman from "./assets/videos/videoHartman.mp4"
 import videoPolloG from "./assets/videos/videoPolloG.mp4"
+//videos-eng
+import videoEngMeg from "./assets/videos/videos-eng/video-eng-Meg.mp4"
 
 export const persons = [
     {
@@ -61,7 +63,9 @@ export const persons = [
         person: 'Meg Griffin',
         image: megGriffin,
         quote: '“You can’t sell me, you fat son of a bitch!”',
-        video: videoMeg
+        quoteITA: `Non puoi vendermi, grasso figlio di puttana!`,
+        video: videoMeg,
+        videoEng: videoEngMeg
     },
     {
         id: 5,
@@ -88,14 +92,14 @@ export const persons = [
         id: 8,
         person: "Cleveland Brown",
         image: clevelandBrown,
-        quote: '"Hey, ragazzi, non c’è niente che non possa sistemare con un po’ di affetto e un paio di hamburger."',
+        quote: `"Hey guys, there's nothing I can't fix with a little love and a couple of burgers."`,
         video: videoCleveland
     },
     {
         id: 9,
         person: "Joe Swanson",
         image: joe,
-        quote: '"Non mi fermo mai! Niente mi ferma! Tranne la mia sedia a rotelle."',
+        quote: '"I never stop! Nothing stops me! Except my wheelchair."',
         video: videoJoe
     },
     {
@@ -109,43 +113,43 @@ export const persons = [
         id: 12,
         person: "Herbert",
         image: herbert,
-        quote: `"Ehi, ragazzino, che ne dici di un po' di caramelle...e magari anche un po' di compagnia?"`,
+        quote: `"Hey, kiddo, how about some candy...and maybe some company?"`,
         video: videoHerbert
     },
     {
         id: 13,
         person: "Carter Pewterschmidt",
         image: carter,
-        quote: "I do it because I can!",
+        quote: '"I do it because I can!"',
         video: videoCarter
     },
     {
         id: 13,
         person: "Mort Goldman",
         image: mort,
-        quote: "Oh no! I can't believe this is happening!",
+        quote: `"Oh no! I can't believe this is happening!"`,
         video: videoMort
     },
     {
         id: 14,
         person: "Tom Tucker",
         image: tucker,
-        quote: "I'm too young to be involved in this stuff!",
+        quote: `"I'm too young to be involved in this stuff!"`,
         video: videoTucker
     },
     {
         id: 15,
-        person: "West",
+        person: "Mayor West",
         image: west,
-        quote: "I like it when things go according to my plans.",
+        quote: '"I like it when things go according to my plans."',
         video: videoWest
     },
     {
         id: 16,
         person: "Dr. Hartman",
-        image: hartaman,
-        quote: "Alright, Peter, it's nothing serious, but let's try to be careful.",
-        video: videoHartamn
+        image: hartman,
+        quote: `"Alright, Peter, it's nothing serious, but let's try to be careful."`,
+        video: videoHartman
     }
 ]
 

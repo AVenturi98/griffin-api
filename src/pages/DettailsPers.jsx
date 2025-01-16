@@ -7,6 +7,8 @@ export default function DettailsPers() {
 
     const [post, setPost] = useState('')
 
+    const [changeLang, setChangeLang] = useState(true)
+
     const { id } = useParams()
 
     useEffect(() => {
@@ -15,6 +17,14 @@ export default function DettailsPers() {
 
     }, [id])
 
+    function setLangITA() {
+        setChangeLang(false)
+    }
+
+    function setLangEGN() {
+        setChangeLang(true)
+    }
+
     return (
         <>
             {post &&
@@ -22,18 +32,35 @@ export default function DettailsPers() {
                     <img src={post.image} />
                     <div className="info">
                         <h1>{post.person}</h1>
-                        <div>{post.quote}</div>
+                        {changeLang ?
+                            <div>{post.quote}</div> :
+                            <div>{post.quoteITA}</div>
+                        }
+                        <button type="button" onClick={changeLang ? () => setLangITA() : () => setLangEGN()} >{changeLang ? 'ITA' : 'ENG'}</button>
                     </div>
                 </div>
             }
 
             {post.video &&
                 <div className="containClip">
-                    <h2>Enjoy this clip</h2>
-                    <video width="550px" controls>
-                        <source src={post.video} type="video/mp4" />
-                        Il tuo browser non supporta il tag video.
-                    </video>
+                    <h2>{changeLang ? 'Enjoy this clip' : 'Goditi questa clip'}</h2>
+
+                    {changeLang &&
+                        <div className={changeLang ? 'd-block' : 'd-none'}>
+                            <video width="550px" controls>
+                                <source src={post.videoEng} type="video/mp4" />
+                                Il tuo browser non supporta il tag video.
+                            </video>
+                        </div>}
+                    {!changeLang &&
+                        <div className={changeLang ? 'd-none' : 'd-block'} >
+                            <video width="550px" controls>
+                                <source src={post.video} type="video/mp4" />
+                                Il tuo browser non supporta il tag video.
+                            </video>
+                        </div>
+                    }
+
                 </div>}
 
         </>
