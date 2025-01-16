@@ -124,7 +124,8 @@ button:hover {
 }
 
 .header,
-.header>ul {
+.header>ul,
+.headIndex {
   display: flex;
   gap: 1rem;
 }
@@ -152,6 +153,11 @@ button:not(#btn_lang) {
 
 .col-100 {
   width: 100%;
+}
+
+.headIndex {
+  justify-content: space-between;
+  align-items: center;
 }
 
 .flexListCharacter,

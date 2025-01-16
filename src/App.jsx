@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
+import { persons } from './persons'
 import GlobalContext from "./context/GlobalContext"
 import Home from './pages/Home'
 import Name from './pages/Name'

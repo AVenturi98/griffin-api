@@ -27,9 +27,10 @@ export default function Nav() {
                     </li>
                 </ul>
                 <div>
-                    <button type="button">
+                    {/* <button type="button" onSubmit={() => filterPerson()}>
                         <FontAwesomeIcon icon={faMagnifyingGlass} />
-                    </button>
+                    </button> */}
+                    {/* <input type="text" onSubmit={() => filterPerson()} onChange={(e) => { setSearch(e.target.value) }} value={search} /> */}
                     <button type="button" onClick={changeLang ? () => setLangITA() : () => setLangEGN()} id="btn_lang" >{changeLang ? 'ITA' : 'ENG'}</button>
                 </div>
 

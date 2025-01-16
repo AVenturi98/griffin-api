@@ -1,7 +1,9 @@
 import { NavLink } from "react-router-dom";
 import css from './Card.module.css'
 
-export default function Card({ person, image, quote, id }) {
+export default function Card({ item }) {
+
+    const { person, image, quote, id } = item
 
     return (
         <>
