@@ -1,5 +1,5 @@
 // import css from './Home.module.css'
-import griffin from '../assets/griffin.jpg'
+import griffin from '../assets/imgs/griffin.jpg'
 
 export default function Home() {
 

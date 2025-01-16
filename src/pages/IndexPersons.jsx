@@ -12,7 +12,7 @@ export default function IndexPersons() {
                 </div>
                 <div className="row">
                     {persons.map((pers, i) => (
-                        <div key={i} className="col-6">
+                        <div key={i}>
                             <Card person={pers.person} image={pers.image} quote={pers.quote} id={pers.id} />
                         </div>
                     ))}

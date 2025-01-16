@@ -133,13 +133,9 @@ li {
   width: 100%;
 }
 
-
-.col-6 {
-  width: calc(3 * 100% / 12);
-}
-
 .flexListCharacter,
-.flexListName {
+.flexListName,
+.containClip {
   padding: 2rem
 }
 
@@ -149,4 +145,34 @@ li {
 
 #name_list {
   list-style: decimal;
+}
+
+/* DETTAILS CARD */
+.dettailsCard {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1.5rem
+}
+
+.dettailsCard>img {
+  width: 350px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info :not(:first-child) {
+  color: gold;
+}
+
+.containClip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
