@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useState } from 'react'
+import GlobalContext from "./context/GlobalContext"
 import Home from './pages/Home'
 import Name from './pages/Name'
 import Character from './pages/Character'
@@ -10,25 +12,28 @@ import DettailsPers from './pages/DettailsPers'
 
 function App() {
 
+  const [changeLang, setChangeLang] = useState(true)
 
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route element={<DefaultLayout />}>
-            <Route path='/' element={<Home />}></Route>
-            <Route path='/name' element={<Name />}></Route>
-            <Route path='/character' element={<Character />}></Route>
-            <Route path='/person'>
-              <Route index element={<IndexPersons />}></Route>
-              <Route path=':id/' element={<DettailsPers />}></Route>
+      <GlobalContext.Provider value={{ changeLang, setChangeLang }}>
+        <BrowserRouter>
+          <Routes>
+            <Route element={<DefaultLayout />}>
+              <Route path='/' element={<Home />}></Route>
+              <Route path='/name' element={<Name />}></Route>
+              <Route path='/character' element={<Character />}></Route>
+              <Route path='/person'>
+                <Route index element={<IndexPersons />}></Route>
+                <Route path=':id/' element={<DettailsPers />}></Route>
+              </Route>
             </Route>
-          </Route>
-          <Route element={<BlankLayout />}>
-            <Route path='*' element={<Lost />}></Route>
-          </Route>
-        </Routes>
-      </BrowserRouter>
+            <Route element={<BlankLayout />}>
+              <Route path='*' element={<Lost />}></Route>
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </GlobalContext.Provider>
     </>
   )
 }

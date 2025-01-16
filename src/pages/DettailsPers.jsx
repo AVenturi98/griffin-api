@@ -1,13 +1,14 @@
 import { useParams } from "react-router-dom"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { persons } from "../persons"
+import GlobalContext from "../context/GlobalContext"
 
 
 export default function DettailsPers() {
 
     const [post, setPost] = useState('')
 
-    const [changeLang, setChangeLang] = useState(true)
+    const { changeLang, setChangeLang } = useContext(GlobalContext)
 
     const { id } = useParams()
 

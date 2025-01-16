@@ -110,14 +110,14 @@ export const persons = [
         video: videoPolloG
     },
     {
-        id: 12,
+        id: 11,
         person: "Herbert",
         image: herbert,
         quote: `"Hey, kiddo, how about some candy...and maybe some company?"`,
         video: videoHerbert
     },
     {
-        id: 13,
+        id: 12,
         person: "Carter Pewterschmidt",
         image: carter,
         quote: '"I do it because I can!"',

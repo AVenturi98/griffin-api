@@ -11,7 +11,7 @@ export default function Person() {
                 <h1 className='titleName'>Tutti i nomi dei personaggi che troverai</h1>
                 <ol>
                     {persons.map((name) => (
-                        <li key={name.id} id='name_list'>
+                        <li key={name.id.toString()} id='name_list'>
                             <NavLink to={`/person/${name.id}`}>{name.person}</NavLink>
                         </li>
                     ))}
