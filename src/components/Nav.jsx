@@ -1,8 +1,6 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import GlobalContext from "../context/GlobalContext";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHandPointUp } from "@fortawesome/free-solid-svg-icons";
 
 export default function Nav() {
 

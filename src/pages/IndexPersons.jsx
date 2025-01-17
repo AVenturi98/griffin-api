@@ -1,11 +1,14 @@
 import { persons } from "../persons.js"
 import Card from '../components/card/Card.jsx'
-import { useState } from "react"
+import { useState, useContext } from "react"
+import GlobalContext from "../context/GlobalContext.js"
 
 
 export default function IndexPersons() {
 
     const [search, setSearch] = useState('')
+
+    const { changeLang } = useContext(GlobalContext)
 
     const filteredPersons = persons.filter(p =>
         p.person.toLowerCase().includes(search.toLowerCase())
@@ -17,14 +20,14 @@ export default function IndexPersons() {
             <div className="flexListCharacter">
                 <div className="headIndex">
                     <div className="col-100">
-                        <h1>Elenco di tutti i personaggi</h1>
+                        <h1>{changeLang ? 'List of all characters' : 'Elenco di tutti i personaggi'}</h1>
                     </div>
-                    <input type="text" placeholder="search person" value={search} onChange={(e) => setSearch(e.target.value)} />
+                    <input type="text" placeholder="search person" value={search} onChange={(e) => setSearch(e.target.value)} className="filter" />
                 </div>
                 {search ?
                     <div className="row">
                         {filteredPersons.map(p =>
-                            <Card item={p} />
+                            <Card key={p.id} item={p} />
                         )}
                     </div> :
                     <div className="row">

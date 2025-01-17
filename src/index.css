@@ -61,7 +61,8 @@ h1 {
 }
 
 li,
-button {
+button,
+.filter {
   padding: .6rem
 }
 
@@ -135,7 +136,8 @@ button:hover {
 }
 
 .header>ul>li,
-button:not(#btn_lang) {
+button:not(#btn_lang),
+.filter {
   background-color: #535353;
   border: 1px solid rgba(70, 69, 69, 0.61);
   border-radius: 10px;
@@ -241,12 +243,12 @@ button:not(#btn_lang) {
 @keyframes pointBtnLang {
   from {
     transform: scale(0.5);
-    color: rgba(70, 69, 69, 0);
+    color: rgb(255, 255, 255);
   }
 
   to {
     transform: scale(1.2);
-    color: rgba(70, 69, 69, 1);
+    color: rgba(255, 255, 255, 1);
     transition: 100ms;
   }
 }

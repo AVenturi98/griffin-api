@@ -2,8 +2,8 @@ import { useParams } from "react-router-dom"
 import { useContext, useEffect, useState } from "react"
 import { persons } from "../persons"
 import GlobalContext from "../context/GlobalContext"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHandPointUp } from "@fortawesome/free-solid-svg-icons";
+import HandIcon from "../components/HandIcon"
+import Video from "../components/Video"
 
 export default function DettailsPers() {
 
@@ -44,32 +44,21 @@ export default function DettailsPers() {
                             {changeLang &&
                                 <div className={changeLang ? 'd-block' : 'd-none'}>
                                     {post.videoEng ?
-                                        <video width="550px" controls>
-                                            <source src={post.videoEng} type="video/mp4" />
-                                            Il tuo browser non supporta il tag video.
-                                        </video> :
+                                        <Video video={post.videoEng} /> :
                                         <>
-                                            <div id="iconHand">
-                                                <FontAwesomeIcon icon={faHandPointUp} className={post.video && !post.videoEng ? "iconHandUp" : 'd-none'} />
-                                            </div>
+                                            <HandIcon first={post.video} second={post.videoEng} />
                                             'Try to change language for view clip'
                                         </>}
                                 </div>}
                             {!changeLang &&
                                 <div className={changeLang ? 'd-none' : 'd-block'} >
                                     {post.video ?
-                                        <video width="550px" controls>
-                                            <source src={post.video} type="video/mp4" />
-                                            Il tuo browser non supporta il tag video.
-                                        </video> :
+                                        <Video video={post.video} /> :
                                         <>
-                                            <div id="iconHand">
-                                                <FontAwesomeIcon icon={faHandPointUp} className={!post.video && post.videoEng ? "iconHandUp" : 'd-none'} />
-                                            </div>
+                                            <HandIcon first={post.videoEng} second={post.video} />
                                             'Prova a cambiare lingua per vedere la clip'
                                         </>}
-                                </div>
-                            }
+                                </div>}
                         </div>}
                 </div>
             </section>
