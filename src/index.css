@@ -75,17 +75,49 @@ button:hover {
 }
 
 .header {
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: rgb(150, 143, 127);
   position: relative;
 }
 
+.tooltip-lang {
+  display: inline-block;
+  position: relative;
+}
+
+.tooltip-lang .tooltip-text {
+  visibility: hidden;
+  width: 150px;
+  background-color: #313131;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: -20%;
+  right: 120%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-lang .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 100%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent #313131;
+}
+
+.tooltip-lang:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1
+}
+
 #btn_lang {
   padding: 5px 7px;
-  position: absolute;
-  right: -25px;
-  bottom: 40px;
 }
 
 #name_quote {
@@ -221,6 +253,11 @@ button:not(#btn_lang),
   display: block
 }
 
+.hidden {
+  opacity: 0;
+  cursor: context-menu;
+}
+
 #iconHand {
   padding: 5px 7px;
   position: absolute;
@@ -235,7 +272,7 @@ button:not(#btn_lang),
   right: 20px;
   bottom: 20px;
   padding: 1rem;
-  z-index: 99;
+  z-index: 3;
 }
 
 #btn_top:hover {

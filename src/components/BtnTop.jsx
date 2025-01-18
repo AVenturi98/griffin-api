@@ -18,7 +18,6 @@ export default function BtnTop() {
     }
 
     return (
-
         <button id="btn_top" onClick={top}>
             <FontAwesomeIcon icon={faArrowUp} />
         </button >

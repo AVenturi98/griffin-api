@@ -10,6 +10,9 @@ export default function Nav() {
 
         <>
             <nav className="header">
+                <div className="hidden">
+                    BLANK OUTLET
+                </div>
                 <ul id="listNav">
                     <li>
                         <NavLink to='/'>Home</NavLink>
@@ -24,8 +27,11 @@ export default function Nav() {
                         <NavLink to='/person'>All persons</NavLink>
                     </li>
                 </ul>
-                <div >
-                    <button type="button" onClick={changeLang ? () => setLangITA() : () => setLangEGN()} id="btn_lang" >{changeLang ? 'ITA' : 'ENG'}</button>
+                <div>
+                    <div className="tooltip-lang">
+                        <button type="button" onClick={changeLang ? () => setLangITA() : () => setLangEGN()} id="btn_lang" >{changeLang ? 'ITA' : 'ENG'}</button>
+                        <p className="tooltip-text" >Change language</p>
+                    </div>
                 </div>
             </nav>
         </>

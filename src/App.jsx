@@ -29,7 +29,6 @@ function App() {
 export default App
 
 
-// fixed header or btn for return  to top page
 // tooltip btn lang
 // pagination 
 // add clip videos eng
