@@ -51,3 +51,8 @@ img,
 .image {
     aspect-ratio: 2/1;
 }
+
+#link:hover {
+    color: currentColor;
+    cursor: auto;
+}

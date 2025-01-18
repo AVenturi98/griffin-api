@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import GlobalContext from '../context/GlobalContext'
 import { persons } from '../persons'
+import BtnTop from '../components/BtnTop'
 
 export default function Character() {
 
@@ -19,6 +20,7 @@ export default function Character() {
                     </ul>
                 )}
             </div>
+            <BtnTop />
         </>
 
     )

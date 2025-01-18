@@ -2,7 +2,7 @@ import { persons } from "../persons.js"
 import Card from '../components/card/Card.jsx'
 import { useState, useContext } from "react"
 import GlobalContext from "../context/GlobalContext.js"
-
+import BtnTop from "../components/BtnTop.jsx"
 
 export default function IndexPersons() {
 
@@ -13,7 +13,6 @@ export default function IndexPersons() {
     const filteredPersons = persons.filter(p =>
         p.person.toLowerCase().includes(search.toLowerCase())
     )
-
 
     return (
         <>
@@ -38,6 +37,7 @@ export default function IndexPersons() {
                         ))}
                     </div>}
             </div>
+            <BtnTop />
         </>
     )
 }

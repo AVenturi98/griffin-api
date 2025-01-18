@@ -230,6 +230,19 @@ button:not(#btn_lang),
   transform: rotate(45deg);
 }
 
+#btn_top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 1rem;
+  z-index: 99;
+}
+
+#btn_top:hover {
+  transform: scale(0.96);
+  background-color: #505050;
+}
+
 .iconHandUp {
   animation-name: pointBtnLang;
   animation-duration: 500ms;
