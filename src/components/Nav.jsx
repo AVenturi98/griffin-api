@@ -4,7 +4,7 @@ import GlobalContext from "../context/GlobalContext";
 
 export default function Nav() {
 
-    const { changeLang, setLangITA, setLangEGN, post } = useContext(GlobalContext)
+    const { changeLang, setLangITA, setLangEGN } = useContext(GlobalContext)
 
     return (
 
@@ -27,10 +27,10 @@ export default function Nav() {
                         <NavLink to='/person'>All persons</NavLink>
                     </li>
                 </ul>
-                <div>
+                <div className="change-lang">
                     <div className="tooltip-lang">
                         <button type="button" onClick={changeLang ? () => setLangITA() : () => setLangEGN()} id="btn_lang" >{changeLang ? 'ITA' : 'ENG'}</button>
-                        <p className="tooltip-text" >Change language</p>
+                        <p className="tooltip-text" >{changeLang ? 'Change language' : 'Cambia lingua'}</p>
                     </div>
                 </div>
             </nav>

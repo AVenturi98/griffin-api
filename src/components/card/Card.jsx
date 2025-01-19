@@ -5,7 +5,7 @@ import GlobalContext from "../../context/GlobalContext";
 
 export default function Card({ item }) {
 
-    const { person, image, quote, quoteITA, id } = item
+    const { person, image, quoteENG, quoteITA, id } = item
 
     const { changeLang } = useContext(GlobalContext)
 
@@ -21,7 +21,7 @@ export default function Card({ item }) {
                             <img src={image} className={css.image} alt="" />
                         </figure>
                         <div className={css.cardContent}>
-                            <p className="listItem">{changeLang ? quote : quoteITA}</p>
+                            <p className="listItem">{changeLang ? quoteENG : quoteITA}</p>
                         </div>
                     </div>
                 </Link>

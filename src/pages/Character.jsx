@@ -11,16 +11,15 @@ export default function Character() {
         <>
             <div className='flexListCharacter'>
                 <h1 className='titleName'>{changeLang ? `The characters' iconic phrases` : 'Le frasi iconiche dei personaggi'}</h1>
-                {persons.map((name, i) =>
-                    <ul key={i}>
+                {persons.map((person) =>
+                    <ul key={person.id}>
                         <li id='name_quote'>
-                            {name.person}
+                            {person.person}
                         </li>
-                        <li className='quote'>{changeLang ? name.quote : name.quoteITA}</li>
+                        <li className='quote'>{changeLang ? person.quoteENG : person.quoteITA}</li>
                     </ul>
                 )}
             </div>
-            <BtnTop />
         </>
 
     )

@@ -4,6 +4,7 @@ import { persons } from "../persons"
 import GlobalContext from "../context/GlobalContext"
 import HandIcon from "../components/HandIcon"
 import Video from "../components/Video"
+import BtnTop from "../components/BtnTop"
 
 export default function DettailsPers() {
 
@@ -18,7 +19,7 @@ export default function DettailsPers() {
     }, [id])
 
     return (
-        <main>
+        <main className="main">
             <section>
                 {post &&
                     <div className="dettailsCard">
@@ -26,7 +27,7 @@ export default function DettailsPers() {
                         <div className="info">
                             <h1>{post.person}</h1>
                             {changeLang ?
-                                <div>{post.quote}</div> :
+                                <div>{post.quoteENG}</div> :
                                 <div>{post.quoteITA}</div>
                             }
                         </div>

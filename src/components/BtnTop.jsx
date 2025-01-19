@@ -18,8 +18,9 @@ export default function BtnTop() {
     }
 
     return (
-        <button id="btn_top" onClick={top}>
-            <FontAwesomeIcon icon={faArrowUp} />
+        <button type="button" id="btn_top" onClick={top}>
+            <FontAwesomeIcon icon={faArrowUp} id="iconTop" />
+            <p className="d-none">Back Top</p>
         </button >
     )
 }

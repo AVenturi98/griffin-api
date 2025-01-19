@@ -66,7 +66,7 @@ button,
   padding: .6rem
 }
 
-button:first-child {
+.change-lang {
   margin-right: 2rem;
 }
 
@@ -98,7 +98,7 @@ button:hover {
   bottom: -20%;
   right: 120%;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: 0.6s;
 }
 
 .tooltip-lang .tooltip-text::after {
@@ -207,8 +207,14 @@ button:not(#btn_lang),
   margin: 5rem 0;
 }
 
+.name-grid {
+  display: grid;
+  grid-template-rows: repeat(5, auto);
+  grid-auto-flow: column;
+}
+
 #name_list {
-  list-style: decimal;
+  list-style: inside;
 }
 
 /* DETTAILS CARD */
@@ -245,12 +251,24 @@ button:not(#btn_lang),
   margin: 2rem auto;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem auto;
+  gap: 20px
+}
+
 .d-none {
   display: none;
 }
 
 .d-block {
   display: block
+}
+
+.opacity {
+  opacity: 0.5;
 }
 
 .hidden {
@@ -273,6 +291,7 @@ button:not(#btn_lang),
   bottom: 20px;
   padding: 1rem;
   z-index: 3;
+  display: none;
 }
 
 #btn_top:hover {
@@ -301,4 +320,8 @@ button:not(#btn_lang),
     color: rgba(255, 255, 255, 1);
     transition: 100ms;
   }
+}
+
+.color {
+  color: goldenrod;
 }

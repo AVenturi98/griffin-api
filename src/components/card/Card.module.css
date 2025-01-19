@@ -5,11 +5,12 @@
     height: 600px;
     width: 380px;
     position: relative;
+    background-color: #1b1b1b;
 }
 
 .card:hover {
     transform: scale(0.99);
-    background-color: #292828;
+    background-color: #242424;
 }
 
 .cardTitle {

@@ -41,7 +41,7 @@ export const persons = [
         id: 1,
         person: 'Peter Griffin',
         image: peterGriffin,
-        quote: '"Shut up Meg."',
+        quoteENG: '"Shut up Meg."',
         quoteITA: '"Stai zitta Meg."',
         video: videoPeter,
         videoEng: undefined
@@ -50,7 +50,7 @@ export const persons = [
         id: 2,
         person: 'Stewie Griffin',
         image: stewieGriffin,
-        quote: '“Aw youre crazy bitch I didnt say that bitch”',
+        quoteENG: '“Aw youre crazy bitch I didnt say that bitch”',
         quoteITA: `"Oh, sei una pazza stronza, non l'ho detto io, stronza"`,
         video: videoStewie,
         videoEng: undefined
@@ -59,7 +59,7 @@ export const persons = [
         id: 3,
         person: 'Lois Griffin',
         image: loisGriffin,
-        quote: '“Yes, Tina Fey, you’re better than Jesus.”',
+        quoteENG: '“Yes, Tina Fey, you’re better than Jesus.”',
         quoteITA: '"Sì, Tina Fey, sei meglio di Gesù."',
         video: videoLois,
         videoEng: undefined
@@ -68,7 +68,7 @@ export const persons = [
         id: 4,
         person: 'Meg Griffin',
         image: megGriffin,
-        quote: '“You can’t sell me, you fat son of a bitch!”',
+        quoteENG: '“You can’t sell me, you fat son of a bitch!”',
         quoteITA: `Non puoi vendermi, grasso figlio di puttana!`,
         video: videoMeg,
         videoEng: videoEngMeg
@@ -77,7 +77,7 @@ export const persons = [
         id: 5,
         person: 'Chris Griffin',
         image: chrisGriffin,
-        quote: '“I don’t have to listen to you, you’re a dog, you don’t have a soul!”',
+        quoteENG: '“I don’t have to listen to you, you’re a dog, you don’t have a soul!”',
         quoteITA: `"Non devo ascoltarti, sei un cane, non hai un'anima!"`,
         video: videoChris,
         videoEng: undefined
@@ -86,7 +86,7 @@ export const persons = [
         id: 6,
         person: 'Brian Griffin',
         image: brainGriffin,
-        quote: '“Hey, how about a little less questions and a little more shut the hell up?”',
+        quoteENG: '“Hey, how about a little less questions and a little more shut the hell up?”',
         quoteITA: `"Ehi, che ne dici di fare un po' meno domande e di stare un po' più zitto?"`,
         video: undefined,
         videoEng: videoBrain
@@ -95,7 +95,7 @@ export const persons = [
         id: 7,
         person: 'Glen Quagmire',
         image: quagmire,
-        quote: '"Giggity giggity giggity"',
+        quoteENG: '"Giggity giggity giggity"',
         quoteITA: '"Giggity giggity giggity"',
         video: videoQuagmire,
         videoEng: undefined
@@ -104,7 +104,7 @@ export const persons = [
         id: 8,
         person: "Cleveland Brown",
         image: clevelandBrown,
-        quote: `"Hey guys, there's nothing I can't fix with a little love and a couple of burgers."`,
+        quoteENG: `"Hey guys, there's nothing I can't fix with a little love and a couple of burgers."`,
         quoteITA: `"Ehi ragazzi, non c'è niente che non possa risolvere con un po' di amore e un paio di hamburger."`,
         video: videoCleveland,
         videoEng: undefined
@@ -113,7 +113,7 @@ export const persons = [
         id: 9,
         person: "Joe Swanson",
         image: joe,
-        quote: '"I never stop! Nothing stops me! Except my wheelchair."',
+        quoteENG: '"I never stop! Nothing stops me! Except my wheelchair."',
         quoteITA: '"Non mi fermo mai! Niente mi ferma! Tranne la mia sedia a rotelle."',
         video: videoJoe,
         videoEng: undefined
@@ -122,7 +122,7 @@ export const persons = [
         id: 10,
         person: 'The Giant Chicken',
         image: chicken,
-        quote: '',
+        quoteENG: '',
         quoteITA: '',
         video: videoPolloG,
         videoEng: undefined
@@ -131,7 +131,7 @@ export const persons = [
         id: 11,
         person: "Herbert",
         image: herbert,
-        quote: `"Hey, kiddo, how about some candy...and maybe some company?"`,
+        quoteENG: `"Hey, kiddo, how about some candy...and maybe some company?"`,
         quoteITA: `"Ehi, piccolo, che ne dici di qualche caramella... e magari un po' di compagnia?"`,
         video: videoHerbert,
         videoEng: undefined
@@ -140,7 +140,7 @@ export const persons = [
         id: 12,
         person: "Carter Pewterschmidt",
         image: carter,
-        quote: '"I do it because I can!"',
+        quoteENG: '"I do it because I can!"',
         quoteITA: '"Lo faccio perché posso!"',
         video: videoCarter,
         videoEng: undefined
@@ -149,7 +149,7 @@ export const persons = [
         id: 13,
         person: "Mort Goldman",
         image: mort,
-        quote: `"Oh no! I can't believe this is happening!"`,
+        quoteENG: `"Oh no! I can't believe this is happening!"`,
         quoteITA: '"Oh no! Non posso credere che stia succedendo!"',
         video: videoMort,
         videoEng: undefined
@@ -158,7 +158,7 @@ export const persons = [
         id: 14,
         person: "Tom Tucker",
         image: tucker,
-        quote: `"I'm too young to be involved in this stuff!"`,
+        quoteENG: `"I'm too young to be involved in this stuff!"`,
         quoteITA: '"Sono troppo giovane per essere coinvolto in queste cose!"',
         video: videoTucker,
         videoEng: undefined
@@ -167,8 +167,8 @@ export const persons = [
         id: 15,
         person: "Mayor West",
         image: west,
-        quote: '"I like it when things go according to my plans."',
         quoteITA: '"Mi piace quando le cose vanno secondo i miei piani."',
+        quoteENG: '"I like it when things go according to my plans."',
         video: videoWest,
         videoEng: undefined
     },
@@ -176,7 +176,7 @@ export const persons = [
         id: 16,
         person: "Dr. Hartman",
         image: hartman,
-        quote: `"Alright, Peter, it's nothing serious, but let's try to be careful."`,
+        quoteENG: `"Alright, Peter, it's nothing serious, but let's try to be careful."`,
         quoteITA: '"Va bene, Peter, non è niente di grave, ma cerchiamo di stare attenti."',
         video: videoHartman,
         videoEng: undefined
