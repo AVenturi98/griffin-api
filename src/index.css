@@ -61,8 +61,7 @@ h1 {
 }
 
 li,
-button,
-.filter {
+button {
   padding: .6rem
 }
 
@@ -114,6 +113,27 @@ button:hover {
 .tooltip-lang:hover .tooltip-text {
   visibility: visible;
   opacity: 1
+}
+
+.filter {
+  padding: .6rem;
+  display: flex;
+}
+
+input[type=text] {
+  border: none;
+  background-color: #535353;
+}
+
+#clear-filter {
+  padding: 0;
+  border: none !important;
+  cursor: pointer;
+}
+
+#icon-filter {
+  font-size: 20px;
+  margin: auto 3px;
 }
 
 #btn_lang {
